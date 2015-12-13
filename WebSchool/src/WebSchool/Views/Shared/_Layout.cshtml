@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>学校后台管理</title>
+</head>
+<body>
+    <div>
+        <div class="side">
+            <ul>
+                <h4>新闻管理</h4>
+                <li><a asp-action="DetailsNews" asp-controller="Admin">管理新闻</a></li>
+                <li><a asp-action="CreateNews" asp-controller="Admin">添加新闻 </a></li>
+                <li><a asp-action="Index" asp-controller="Account">进入官网</a></li>
+                <li><a asp-action="Login" asp-controller="Account">退出后台</a></li>
+
+            </ul>
+        </div>
+        @RenderBody()
+    </div>
+</body>
+</html>

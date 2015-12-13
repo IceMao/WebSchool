@@ -1,0 +1,27 @@
+﻿@{ 
+    ViewBag.Title = "登录";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="login">
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <h2>学校网站后台登录页面</h2>
+            <input class="textbox" type="text" placeholder="name" name="username" />
+            <br/>
+            <input class="textbox" type="password" placeholder="password" name="password" />
+            <input class="login-btn" type="submit" value="Login" />
+        </form>
+    </div>
+    <div class="clr"></div>
+    <div class="footer">
+        Copyright 2015 .
+    </div>
+</body>
+</html>

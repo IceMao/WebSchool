@@ -1,0 +1,71 @@
+﻿@*
+    这是刚开始的页面----学校首页    
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width，initial-scale=1.0" />
+    <title>index</title>
+</head>
+<style>
+    body,ul,li,div {margin:0; padding:0; list-style:none;}
+    .container { width:960px; margin:0 auto; }
+    .title { height:40px;}
+    .nav {}
+    .nav ul { overflow: hidden;}
+    .nav li {float:left; height:30px; font-size:15px; background-color:#0094ff; padding:20px;}
+    
+    .content {}
+    .content-side {width:200px; height:400px; background-color:aquamarine;}
+</style>
+<body>
+    <div>
+        <div class="container">
+            <div class="title"><h1>小学官网</h1></div>
+            <div class="nav">
+                <ul>
+                    <li><a asp-action="Index" asp-controller="Home">首页</a></li>
+                    <li><a asp-action="SchoolInfo" asp-controller="Admin">学校概况</a></li>
+                    <li><a asp-action="Photos" asp-controller="Admin">校园风光</a></li>
+                    <li><a asp-action="RecruitStudents" asp-controller="Admin">招生信息</a></li>
+                    <li><a asp-action="News" asp-controller="Page">校园新闻</a></li>
+                    <li><a asp-action="Article" asp-controller="Admin">文章</a></li>
+                    
+                    <li><a asp-action="Login" asp-controller="Account">管理入口</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="content-side">
+                    <h5>校园新闻快讯------>>></h5>
+                    <div>
+                        <div>
+                            <ul>
+                                <li style="cursor:pointer"><a href="/News/Show/2232" title="[武汉] 武汉市社区教育学院举行社区心理指导员培训">[武汉] 武汉市社区教育学院举行社区心理指导员培训</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2233" title="[嘉兴] 桐乡社区教育工作者赴遂昌参观">[嘉兴] 桐乡社区教育工作者赴遂昌参观</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2234" title="[郑州] 新密市社区学院挂牌成立">[郑州] 新密市社区学院挂牌成立</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2235" title="[上海] 2015年温州城市大学老年教育骨干研修班圆满结束">[上海] 2015年温州城市大学老年教育骨干研修班圆满结束</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2236" title="[成都] 武侯社区学院开展“送教进社区”调研活动">[成都] 武侯社区学院开展“送教进社区”调研活动</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2237" title="[上海] 徐汇区召开“互联网&amp;#43”社区教育发展论坛">[上海] 徐汇区召开“互联网&amp;#43”社区教育发展论坛</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2238" title="[苏州] 张家港凤凰镇社教中心召开社区教育项目总结交流会">[苏州] 张家港凤凰镇社教中心召开社区教育项目总结交流会</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2239" title="[温州] 2015年温州市等级社区学校评定暨实验项目中期汇报会召开">[温州] 2015年温州市等级社区学校评定暨实验项目中期汇报会召开</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2240" title="[常州] 常州开放大学社区教育特色项目工作室总结交流会召开">[常州] 常州开放大学社区教育特色项目工作室总结交流会召开</a></li>
+                                <li style="cursor:pointer"><a href="/News/Show/2241" title="[北京] 西城区举办社区教育名师示范教学专题讲座">[北京] 西城区举办社区教育名师示范教学专题讲座</a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        
+
+    </div>
+</body>
+</html>
+
