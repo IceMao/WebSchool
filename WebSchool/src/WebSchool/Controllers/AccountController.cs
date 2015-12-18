@@ -41,6 +41,25 @@ namespace WebSchool.Controllers
             return RedirectToAction("Login", "Account");
         }
 
+        //修改密码
+        [HttpGet]
+        public IActionResult Modify()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Modify(string currentpwd, string newpwd, string confirmpwd)
+        {
+            if (confirmpwd != newpwd)
+                return Content("两次输入密码不一致，请检查重新输入。");
+            var result = await UserManager.ChangePasswordAsync(await UserManager.FindByIdAsync(User.Current.Id), currentpwd, newpwd);
+            if (!result.Succeeded)
+                return Content(result.Errors.First().Description);
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
+        }
+
         //注册
         [HttpGet]
         public IActionResult Register()
