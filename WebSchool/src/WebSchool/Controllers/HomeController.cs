@@ -21,6 +21,11 @@ namespace WebSchool.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Details()
+        {
+            return View();
+        }
 
     }
 }
