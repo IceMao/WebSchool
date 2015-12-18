@@ -11,7 +11,38 @@ namespace WebSchool.Controllers
     public class PageController : Controller
     {
         // GET: /<controller>/
+        [HttpGet]
         public IActionResult News()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Article()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Inform()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Photos()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult RecruitStudents()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult SchoolInfo()
         {
             return View();
         }
