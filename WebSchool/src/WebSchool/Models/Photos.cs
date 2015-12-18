@@ -8,6 +8,9 @@ namespace WebSchool.Models
     public class Photos
     {
         //校园风光
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Discription { get; set; }
         public DateTime Datetime { get; set; }
         public string Path { get; set; } 
     }

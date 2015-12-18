@@ -47,9 +47,6 @@ namespace WebSchool
 
             //初始化数据库并添加初始数据
             await SampleData.InitDB(app.ApplicationServices);
-
-
-
         }
     }
 }

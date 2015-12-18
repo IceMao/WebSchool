@@ -1,16 +1,16 @@
-﻿<form asp-action="CreateNews" asp-controller="Admin" method="post">
-    <h2>添加新闻</h2>
+﻿<form asp-action="CreateArticle" asp-controller="Admin" method="post">
+    <h2>添加文章</h2>
     <table class="Create-table">
         <tr>
-            <th class="row-title">新闻标题</th>
+            <th class="row-title">文章标题</th>
             <td><input type="text" name="Title" /></td>
         </tr>
         <tr>
-            <th class="row-title">新闻内容</th>
+            <th class="row-title">文章内容</th>
             <td><textarea name="Content"></textarea></td>
         </tr>
         <tr>
-            <th class="row-title">新闻来源</th>
+            <th class="row-title">文章来源</th>
             <td>
                 <select name="Source">
                     <option value="-1">请选择</option>
@@ -18,6 +18,17 @@
                     <option value="2">凤凰网</option>
                     <option value="3">人民网</option>
                     <option value="4">其他途径</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="row-title">文章类别</th>
+            <td>
+                <select name="Category">
+                    <option>科学</option>
+                    <option>童话</option>
+                    <option>自然</option>
+                    <option>生物</option>
                 </select>
             </td>
         </tr>
@@ -31,5 +42,5 @@
         <input class="btn" type="submit" value="提交" />
         <a asp-action="Index" asp-controller="Home">取消</a>
     </p>
-    
+
 </form>
