@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model IEnumerable<Photos>
+@{ 
     Layout = null;
 }
 <!DOCTYPE html>
@@ -51,10 +52,7 @@
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
+                        
                     </ul>
                 </li>
             </ul>
@@ -197,11 +195,13 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="data:image/gif;base64" alt="Generic placeholder image" width="140" height="140">
                 <h2>校园新闻</h2>
-                <p>11月25日至27日贵港市达开实验小学积极组织参加了2015年港北区首届“校园体育文化节” 活动。本次校园体育文化节的比赛项目有篮球、足球、乒乓球、100米、50迎面接力、板鞋以及抛绣球。通过学校领导、教练员、运动员、领队的共同努力，在本次校园体育文化节比赛活动中，我校荣获了男子篮球赛冠军，50米（男女混合）迎面接力赛第二名，抛绣球赛第二名， 100米个人赛刘朝江获得第三名，谭顺富获得第六名的好成绩。在比赛过程中运动员遵守纪律、服从裁判、顽强拼搏。运动员们做到“胜不骄，败不馁”，充分展示出达开实验小学运动员顽强的意志、坚韧的品格、团结协作的体育精神，同时也展示了我校“团结和谐、务实创新、争创一流”的精神风貌。
-
-.</p>
+                <!--<ul>
+                    <li>
+                       
+                    </li>
+                </ul>-->
                 <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
