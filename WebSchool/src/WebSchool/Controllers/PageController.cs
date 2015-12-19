@@ -35,7 +35,7 @@ namespace WebSchool.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet]    
         public IActionResult RecruitStudents()
         {
             return View();
