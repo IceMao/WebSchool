@@ -2,7 +2,7 @@
 <form role="form" asp-action="EditPhotos" asp-controller="Admin" method="post">
     <div class="form-group">
         <input type="hidden" name="id" value="@Model.Id" />
-        <table>
+        <table class="table">
             <tr>
                 <th>照片标题</th>
                 <td><input type="text" name="Title" value="@Model.Title" /></td>
@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <th>照片描述</th>
-                <td><textarea class="form-control" rows="3" name="Content" value="@Model.Discription"></textarea></td>
+                <td><textarea class="form-control" rows="3" name="Content">@Model.Discription</textarea></td>
             </tr>
             <tr>
                 <th>添加时间</th>

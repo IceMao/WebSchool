@@ -17,23 +17,17 @@ namespace WebSchool.Controllers
         [HttpGet]
         public IActionResult News()
         {
-            return View();
+            return PagedView(DB.News, 10);
         }
 
         [HttpGet]
         public IActionResult Article()
         {
-            return View();
+             return PagedView(DB.Article, 10);
         }
-
+        
         [HttpGet]
         public IActionResult Inform()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult DetailsInform()
         {
             return PagedView(DB.Inform, 10);
         }
@@ -41,20 +35,19 @@ namespace WebSchool.Controllers
         [HttpGet]
         public IActionResult Photos()
         {
-            return View();
+            return PagedView(DB.Photos, 10);
         }
 
         [HttpGet]    
         public IActionResult RecruitStudents()
         {
-            var ret = DB.RecruitStudents.ToList();
-            return View(ret);
+            return PagedView(DB.RecruitStudents, 10);
         }
 
         [HttpGet]
         public IActionResult SchoolInfo()
         {
-            return View();
+            return PagedView(DB.SchoolInfo, 10);
         }
     }
 }

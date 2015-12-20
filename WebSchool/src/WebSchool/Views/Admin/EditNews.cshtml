@@ -2,14 +2,14 @@
 <form role="form" asp-action="EditNews" asp-controller="Admin" method="post">
     <div class="form-group">
         <input type="hidden" name="id" value="@Model.Id" />
-        <table>
+        <table class="table">
             <tr>
                 <th>新闻标题</th>
                 <td><input class="form-control" type="text" name="Title" value="@Model.Title" /></td>
             </tr>
             <tr>
                 <th>新闻内容</th>
-                <td><textarea class="form-control" rows="3" name="Content" value="@Model.Content"></textarea></td>
+                <td><textarea class="form-control" rows="3" name="Content">@Model.Content</textarea></td>
             </tr>
             <tr>
                 <th class="row-title">新闻来源</th>

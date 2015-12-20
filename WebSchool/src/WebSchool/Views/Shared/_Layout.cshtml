@@ -13,7 +13,9 @@
         <div class="Layout-title">
             <ul>
                 <li><a asp-action="Manage" asp-controller="Home">后台首页</a></li>
-                <li><a asp-action="Index" asp-controller="Home"  target="_blank">网站首页</a></li>
+                <li><a asp-action="Index" asp-controller="Home">网站首页</a></li>
+                <li style="float:right;"><a asp-action="Modify" asp-controller="Account">修改密码</a></li>
+                <li style="float:right;"><a asp-action="Login" asp-controller="Account">退出后台</a></li>
             </ul>
         </div>
         <div class="Layout-side">
@@ -38,10 +40,7 @@
                     <li id="title" class="Layout-side-title"><h5>学校信息管理</h5></li>
                     <li id="Layout-side-menu" class="Layout-side-menu"><a asp-action="DetailsSchoolInfo" asp-controller="Admin">管理学校信息</a>
                     <li id="Layout-side-menu" class="Layout-side-menu"><a asp-action="CreateSchoolInfo" asp-controller="Admin">添加学校信息 </a></li>
-                    <li id="title" class="Layout-side-title"><h5>其他</h5></li>
-                    <li class="Layout-side-menu"><a asp-action="Index" asp-controller="Home">进入官网</a></li>
-                    <li class="Layout-side-menu"><a asp-action="Modify" asp-controller="Account">修改密码</a></li>
-                    <li class="Layout-side-menu"><a asp-action="Login" asp-controller="Account">退出后台</a></li>
+                    
                 </ul>
             </div>
             <div class="Layout-content">
@@ -53,21 +52,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            var oTitle = document.getElementById('title');
-            var oMenu = document.getElementById('Layout-side-menu');
-            var n = 0;
-            oTitle.onclick = function () {
-                if (n = 0) {
-                    oMenu.style.display = "block";
-                    n = 1;
-                }
-                else {
-                    oMenu.style.display = "none";
-                    n = 0;
-                }
-
-            }
-        </script>
+        
 </body>
 </html>

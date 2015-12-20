@@ -4,12 +4,12 @@
         <input type="hidden" name="id" value="@Model.Id" />
         <table class="table">
             <tr>
-                <th>新闻标题</th>
+                <th>文章标题</th>
                 <td><input class="form-control" type="text" name="Title" value="@Model.Title" /></td>
             </tr>
             <tr>
                 <th class="row-title">新闻内容</th>
-                <td><textarea class="form-control" rows="3" name="Content" value="@Model.Content"></textarea></td>
+                <td><textarea class="form-control" rows="3" name="Content">@Model.Content</textarea></td>
             </tr>
             <tr>
                 <th class="row-title">新闻来源</th>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <th class="row-title">添加时间</th>
-                <td><input type="datetime" name="Datatime" value="@Model.Datatime" /></td>
+                <td><input class="form-control" type="datetime" name="Datatime" value="@Model.Datatime" /></td>
             </tr>
         </table>
         <p>
