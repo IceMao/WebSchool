@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 @model IEnumerable<Inform>
+<<<<<<< HEAD
 <table class="table">
     <thead>
         <tr>
@@ -26,9 +27,12 @@
     </tbody>
     
 </table>
+=======
+
+>>>>>>> origin/master
 @foreach (var x in Model)
 {
-<div class="panel-body">
+<div class="container panel-body">
     <strong class="panel-title"><a href="#" style="text-decoration:none;">@x.Title</a></strong>
     <p>@x.Content</p>
 </div>
