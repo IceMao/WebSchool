@@ -23,12 +23,12 @@
             </tr>
             <tr>
                 <th class="row-title">添加时间</th>
-                <td><input class="form-control" type="datetime-local" name="Datatime" value="@Model.Datatime" /></td>
+                <td><input class="form-control" type="datetime" name="Datatime" value="@DateTime.Now" /></td>
             </tr>
         </table>
         <p>
             <input type="submit" value="修改" />
-            <a asp-action="Manage" asp-controller="Home">取消</a>
+            <a asp-action="DetailsNews" asp-controller="Admin">取消</a>
         </p>
 </div>
 </form>

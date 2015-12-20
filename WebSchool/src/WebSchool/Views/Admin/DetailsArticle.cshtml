@@ -23,7 +23,8 @@
                 {
                     <th>
                         <a asp-action="EditArticle" asp-controller="Admin" asp-route-id="@x.Id">修改</a>
-                        <a href="javascript:remove(@x.Id)">删除</a>
+                        @*<a href="javascript:remove(@x.Id)">删除</a>*@
+                        <a asp-action="DeleteArticle" asp-controller="Admin" asp-route-id="@x.Id">删除</a>
                     </th>
                 }
             </tr>
@@ -33,7 +34,7 @@
 </table>
 
 @Html.MakePager("pager-item", "active", "pager")
-@if (User.IsSignedIn())
+@*@if (User.IsSignedIn())
 {
     <form id="frmDelete" asp-aciton="DeleteArticle" asp-controller="Admin" method="post">
         <input type="hidden" id="Id" name="id" />
@@ -47,5 +48,5 @@
                 $('#frmDelete').submit();
             }
         }
-    </script>
-}
+    </script>*@
+@*}*@
