@@ -9,7 +9,7 @@ using WebSchool.Models;
 
 namespace WebSchool.Controllers
 {
-    public class PageController : Controller
+    public class PageController : BaseController
     {
         // GET: /<controller>/
         [FromServices]
@@ -30,6 +30,12 @@ namespace WebSchool.Controllers
         public IActionResult Inform()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult DetailsInform()
+        {
+            return PagedView(DB.Inform, 10);
         }
 
         [HttpGet]
