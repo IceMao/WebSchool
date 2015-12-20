@@ -9,111 +9,68 @@
     <script src="~/scripts/jquery-2.1.0.min.js"></script>
     <script src="~/scripts/bootstrap.min.js"></script>
 </head>
-<<<<<<< HEAD
 <body>
-    <ul class="nav nav-pills">
-        <li class="active"><a asp-action="Manage" asp-controller="Home">后台首页</a></li>
-        <li><a asp-action="Index" asp-controller="Home">网站首页</a></li>
-        <li><a href="#">菜单</a>
+    <div class="container">
+        <div class="col-md-12">
             <ul class="nav nav-pills">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">新闻管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="DetailsNews" asp-controller="Admin">管理新闻</a></li>
-                        <li><a asp-action="CreatNews" asp-controller="Admin">添加新闻</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">文章管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="DetailsArticle" asp-controller="Admin">管理文章</a></li>
-                        <li><a asp-action="CreateArticle" asp-controller="Admin">添加文章 </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">通知公告管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="DetailsInform" asp-controller="Admin">管理通知公告</a></li>
-                        <li><a asp-action="CreateInform" asp-controller="Admin">添加通知公告 </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">校园风光管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="DetailsPhotos" asp-controller="Admin">管理校园风光</a></li>
-                        <li><a asp-action="CreatePhotos" asp-controller="Admin">添加校园风光</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">招生信息管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="DetailsRecruitStudents" asp-controller="Admin">管理招生信息</a></li>
-                        <li><a asp-action="CreateRecruitStudents" asp-controller="Admin">添加招生信息</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">学校信息管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-action="DetailsSchoolInfo" asp-controller="Admin">管理学校信息</a></li>
-                        <li><a asp-action="CreateSchoolInfo" asp-controller="Admin">添加学校信息</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </li>
-        <li><a asp-action="Modify" asp-controller="Account">修改密码</a></li>
-        <li><a asp-action="Login" asp-controller="Account">退出后台</a></li>
-     </ul>
-     <div class="Layout-content">
-         <div class="Layout-content-wrap">
-         @RenderBody()
-         </div>
-     </div>
-=======
-<body><!-- -->
-        <div class="Layout-title">
-            <ul>
-                <li><a asp-action="Manage" asp-controller="Home">后台首页</a></li>
+                <li class="active"><a asp-action="Manage" asp-controller="Home">后台首页</a></li>
                 <li><a asp-action="Index" asp-controller="Home" target="_blank">网站首页</a></li>
-                <li style="float:right;"><a asp-action="Modify" asp-controller="Account">修改密码</a></li>
-                <li style="float:right;"><a asp-action="Login" asp-controller="Account">退出后台</a></li>
-            </ul>
-        </div>
-        <div class="Layout-side">
-            <div class="Layout-left-side">
-                <ul>
-                    <li class="Layout-side-books">菜单</li>
-                    <li id="title" class="Layout-side-title"><h5>新闻管理</h5></li>
-                            <li class="Layout-side-menu"><a asp-action="DetailsNews" asp-controller="Admin">管理新闻</a></li>
-                            <li class="Layout-side-menu"><a asp-action="CreateNews" asp-controller="Admin">添加新闻 </a></li>
-                            <li id="title" class="Layout-side-title"><h5>文章管理</h5></li>
-                            <li class="Layout-side-menu"><a asp-action="DetailsArticle" asp-controller="Admin">管理文章</a></li>
-                            <li class="Layout-side-menu"><a asp-action="CreateArticle" asp-controller="Admin">添加文章 </a></li>
-                            <li id="title" class="Layout-side-title"><h5>通知公告管理</h5></li>
-                            <li class="Layout-side-menu"><a asp-action="DetailsInform" asp-controller="Admin">管理通知公告</a></li>
-                            <li class="Layout-side-menu"><a asp-action="CreateInform" asp-controller="Admin">添加通知公告 </a></li>
-                            <li id="title" class="Layout-side-title"><h5>校园风光管理</h5></li>
-                            <li class="Layout-side-menu"><a asp-action="DetailsPhotos" asp-controller="Admin">管理校园风光</a></li>
-                            <li class="Layout-side-menu"><a asp-action="CreatePhotos" asp-controller="Admin">添加校园风光 </a></li>
-                            <li id="title" class="Layout-side-title"><h5>招生信息管理</h5></li>
-                            <li class="Layout-side-menu"><a asp-action="DetailsRecruitStudents" asp-controller="Admin">管理招生信息</a></li>
-                            <li class="Layout-side-menu"><a asp-action="CreateRecruitStudents" asp-controller="Admin">添加招生信息 </a></li>
-                            <li id="title" class="Layout-side-title"><h5>学校信息管理</h5></li>
-                            <li id="Layout-side-menu" class="Layout-side-menu"><a asp-action="DetailsSchoolInfo" asp-controller="Admin">管理学校信息</a>
-                            <li id="Layout-side-menu" class="Layout-side-menu"><a asp-action="CreateSchoolInfo" asp-controller="Admin">添加学校信息 </a></li>
+                <li>
+                    <ul class="nav nav-pills">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">新闻管理<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="DetailsNews" asp-controller="Admin">管理新闻</a></li>
+                                <li><a asp-action="CreatNews" asp-controller="Admin">添加新闻</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">文章管理<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="DetailsArticle" asp-controller="Admin">管理文章</a></li>
+                                <li><a asp-action="CreateArticle" asp-controller="Admin">添加文章 </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">通知公告管理<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="DetailsInform" asp-controller="Admin">管理通知公告</a></li>
+                                <li><a asp-action="CreateInform" asp-controller="Admin">添加通知公告 </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">校园风光管理<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="DetailsPhotos" asp-controller="Admin">管理校园风光</a></li>
+                                <li><a asp-action="CreatePhotos" asp-controller="Admin">添加校园风光</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">招生信息管理<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="DetailsRecruitStudents" asp-controller="Admin">管理招生信息</a></li>
+                                <li><a asp-action="CreateRecruitStudents" asp-controller="Admin">添加招生信息</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">学校信息管理<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-action="DetailsSchoolInfo" asp-controller="Admin">管理学校信息</a></li>
+                                <li><a asp-action="CreateSchoolInfo" asp-controller="Admin">添加学校信息</a></li>
+                            </ul>
+                        </li>
 
-                        </ul>
-</div>
+                    </ul>
+                </li>
+                <li><a asp-action="Modify" asp-controller="Account">修改密码</a></li>
+                <li><a asp-action="Login" asp-controller="Account">退出后台</a></li>
+            </ul>
             <div class="Layout-content">
                 <div class="Layout-content-wrap">
                     @RenderBody()
-                    <footer class="text-center">
-                        <p>&copy;CopyRight By 2012023015.</p>
-                    </footer>
                 </div>
             </div>
         </div>
->>>>>>> origin/master
-        
+    </div>
 </body>
 </html>
