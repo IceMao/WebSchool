@@ -14,5 +14,7 @@ namespace WebSchool.Models
         public string Content { get; set; }
         public string Category { get; set; }//文章类别（科幻，悬疑...）
         public string Source { get; set; }
+        public string Author { get; set; }
+        public int Clickonthequantity{ get; set; }//点击量
     }
 }

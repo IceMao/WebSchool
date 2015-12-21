@@ -17,13 +17,13 @@ namespace WebSchool.Controllers
         [HttpGet]
         public IActionResult News()
         {
-            return PagedView(DB.News, 10);
+            return PagedView(DB.News, 7);
         }
 
         [HttpGet]
         public IActionResult Article()
         {
-             return PagedView(DB.Article, 10);
+            return PagedView(DB.Article, 7);
         }
         
         [HttpGet]

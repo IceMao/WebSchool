@@ -88,7 +88,7 @@ namespace WebSchool.Controllers
 
         //分页
         [HttpGet]
-        public IActionResult DetailsNews()
+        public IActionResult DetailsNews(int id)
         {
             return PagedView(DB.News, 10);
         }
@@ -158,7 +158,7 @@ namespace WebSchool.Controllers
         //分页
         [HttpGet]
         public IActionResult DetailsArticle()
-        {
+        {           
             return PagedView(DB.Article, 10);
         }
         //渲染添加w文章页面
