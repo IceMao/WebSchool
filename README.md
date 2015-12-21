@@ -1,4 +1,4 @@
 # WebSchool
-Init
-BASE ON VNEXT
-A WEB FOR PRIMARY School 
+#Init
+#BASE ON VNEXT
+#A web for primary School 
