@@ -21,6 +21,12 @@ namespace WebSchool.Controllers
         }
 
         [HttpGet]
+        public IActionResult Hot()
+        {
+            return PagedView(DB.News, 10);
+        }
+
+        [HttpGet]
         public IActionResult Article()
         {
             return PagedView(DB.Article, 7);

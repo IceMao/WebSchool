@@ -408,7 +408,7 @@ namespace WebSchool.Controllers
             n.Content = recruitStudents.Content;
             n.Datatime = recruitStudents.Datatime;
             DB.SaveChanges();
-            return RedirectToAction("DetailsArticle", "Admin");
+            return RedirectToAction("DetailsRecruitStudents", "Admin");
 
         }
 
@@ -421,7 +421,7 @@ namespace WebSchool.Controllers
             DB.RecruitStudents.Remove(recruitStudents);
             DB.SaveChanges();
             System.Diagnostics.Debug.Write("id=" + id);
-            return RedirectToAction("DetailsArticle", "Admin");
+            return RedirectToAction("DetailsRecruitStudents", "Admin");
         }
     }
 }
