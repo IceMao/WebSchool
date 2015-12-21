@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<News>
 <script src="~/scripts/jquery-1.11.1.min.js"></script>
-<table class="table table-hover">
+<div class="container">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>新闻ID</th>
@@ -32,7 +33,7 @@
 
         </tbody>
     </table>
-
+</div>
     @Html.MakePager("pager-item", "active", "pager")
     @*@if (User.IsSignedIn())
     {
