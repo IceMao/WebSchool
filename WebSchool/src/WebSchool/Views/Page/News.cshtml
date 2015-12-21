@@ -2,7 +2,7 @@
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 @model IEnumerable<News>
-
+<div style="margin-top:-20px;"></div>
 <div class="col-md-9">
     <div class="container-fluid" id="accordion">
         <div class="panel-group" id="accordion">
@@ -23,14 +23,15 @@
                                 <small>发布时间:@x.Datatime</small>
                                 @*<small class="pull-right">点击量：<span class="badge">99+</span></small>*@
                             </p>
-                            <pre>@x.Content</pre>
+                            @*<pre>@x.Content</pre>*@
+                            <div>@x.Content</div>
                         </div>
                     </div>
                 </div>
             }
         </div>
     </div>
+    @Html.MakePager("pager-item", "active", "pager")
 </div>
-@Html.MakePager("pager-item", "active", "pager")
 
 
