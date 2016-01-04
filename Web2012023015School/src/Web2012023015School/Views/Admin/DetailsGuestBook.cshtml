@@ -1,0 +1,33 @@
+﻿@model IEnumerable<GuestBook>
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    ViewBag.Title = "留言板";
+}
+<div class="">
+    <h2>留言板</h2>
+    @foreach(var x in Model)
+    {
+        <div class="">
+            <p>
+                @x.NickName(@x.Time)
+            </p>
+            <div>@Html.Sanitize(Html.Marked(x.Content))</div>
+        </div>
+
+    }
+    <div class="">
+        <form asp-action="DetailsGuestBook" asp-controller="Admin" method="post">
+            <table class="">
+                <tr>
+                    <td>昵称</td>
+                    <td><input type="text" name="NickName" /></td>
+                </tr>
+                <tr>
+                    <td>留言</td>
+                    <td><textarea class="text-box" placeholder="支持Markdown语法" name="Content"></textarea></td>
+                </tr>
+            </table>
+            <p><input type="submit" value="留言" /></p>
+        </form>
+    </div>
+</div>

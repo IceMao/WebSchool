@@ -1,0 +1,24 @@
+{
+  "webroot": "wwwroot",
+  "version": "1.0.0-*",
+  "dependencies": {
+    "Web2012023015School": "1.0.0"
+  },
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel"
+  },
+  "frameworks": {
+    "dnx451": {},
+    "dnxcore50": {}
+  },
+  "exclude": [
+    "wwwroot",
+    "node_modules"
+  ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ],
+  "entryPoint": "Web2012023015School",
+  "loadable": false
+}
