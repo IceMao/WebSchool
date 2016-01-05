@@ -13,30 +13,9 @@ namespace Web2012023015School.Controllers
     [Authorize]
     public class AdminController : BaseController
     {
-
         [FromServices]
         public ArticleContext DB { get; set; }
-        
-        //留言模块
-        //渲染首页，输出所有留言
-        [HttpGet]
-        public IActionResult DetailsGuestBook()
-        {
-            var ret = DB.GuestBook
-                .OrderByDescending(x => x.Time)
-                .ToList();
-            return View(ret);
-        }
-
-        //处理留言请求
-        [HttpPost]
-        public IActionResult DetailsGuestBook(GuestBook guestBook)
-        {
-            guestBook.Time = DateTime.Now;
-            DB.GuestBook.Add(guestBook);
-            DB.SaveChanges();
-            return RedirectToAction("DetailsGuestBook", "Admin");
-        }
+        //文章，新闻，....管理模块
 
         //通知公告(增删改查)----------------------------
         [HttpGet]

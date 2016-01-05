@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
 using Web2012023015School.Models;
 
@@ -43,7 +44,13 @@ namespace Web2012023015School.Controllers
         {
             return PagedView(DB.RecruitStudents, 7);
         }
-
+        [HttpGet]
+        public IActionResult Message()
+        {
+            var message = DB.Message.OrderByDescending(x => x.Datatime)
+                .ToList();
+            return PagedView(message,15);
+        }
        
     }
 }

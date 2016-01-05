@@ -11,13 +11,11 @@
     "Microsoft.AspNet.Mvc": "6.0.0-beta8",
     "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta8",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-beta8",
-    "CodeComb.Marked": "2.0.0-beta8",
-    "CodeComb.AspNet.AntiXSS": "2.0.0-beta8"
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta8"
   },
 
   "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel"
+    "web": "Microsoft.AspNet.Server.Kestrel  --server.urls http://*:5000"
   },
 
   "frameworks": {

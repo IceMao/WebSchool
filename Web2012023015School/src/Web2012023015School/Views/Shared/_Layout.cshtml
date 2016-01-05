@@ -65,6 +65,12 @@
                                     <li><a asp-action="CreateSchoolInfo" asp-controller="Admin">添加学校信息</a></li>
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">留言板管理<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-action="DetailsMessage" asp-controller="Home">审核留言板</a></li>
+                                </ul>
+                            </li>
 
                         </ul>
                     </li>
@@ -83,9 +89,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <img src="~/images/xiang.gif" />
     </div>
 </body>
 </html>

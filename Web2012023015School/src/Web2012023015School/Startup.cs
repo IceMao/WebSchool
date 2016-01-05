@@ -23,7 +23,7 @@ namespace Web2012023015School
             //添加EntityFramework 服务
             services.AddEntityFramework()
                 .AddSqlite()
-                .AddDbContext<ArticleContext>(x => x.UseSqlite("Data source=" + appEnv.ApplicationBasePath + "/school.db"));//数据库连接符
+                .AddDbContext<ArticleContext>(x => x.UseSqlite("Data source=" + appEnv.ApplicationBasePath + "/Database/school.db"));//数据库连接符
 
             //添加Identity服务
             services.AddIdentity<User, IdentityRole>()
