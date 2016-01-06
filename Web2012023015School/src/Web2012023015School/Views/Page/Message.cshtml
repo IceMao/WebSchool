@@ -18,7 +18,7 @@
                 {
                     <ul class="well list-unstyled">
                         <li>
-                        <div class="text-success lead">昵称：@x.NickName</div>
+                            <div class="text-success lead">昵称：@x.NickName</div>
                             <p class="text-justify">@x.Content</p>
                             <p class="text-right text-muted">发布时间：@x.Datatime</p>
                         </li>
@@ -39,7 +39,7 @@
                         <tr style="width:100%;height:80px;">
                             <th>留言</th>
                             <td>
-                                <textarea id="TextMsg" name="Content" style="width:100%;height:80px; resize:none;" ></textarea>
+                                <textarea id="TextMsg" name="Content" style="width:100%;height:80px; resize:none;"></textarea>
                             </td>
                         </tr>
                     </table>
@@ -60,11 +60,11 @@
         color: #f00;
     }
 
-    input:-ms-input-placeholder,textarea:-ms-input-placeholder { /* IE 10+ */
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */
         color: #f00;
     }
 
-    input::-webkit-input-placeholder,textarea::-webkit-input-placeholder { /* WebKit browsers */
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit browsers */
         color: #f00;
     }
 </style>
@@ -73,7 +73,7 @@
     var oText = document.getElementById('TextMsg');
     var oBtn = document.getElementById('btnCreateMessage');
 
-    oName.focus();
+    //oName.focus();
     document.onkeydown = function (event) {
         if (event.keyCode == 13) {
             return false;
@@ -106,16 +106,30 @@
         if (str == '' || typeof (str) == 'undefined') {
             oName.placeholder = '昵称不能为空';
             oName.focus();
-        } 
+        }
     };
     oText.onblur = function () {
         var text = oText.value;
+        var str = oName.value;
         if (text == '' || typeof (text) == 'undefined') {
             oText.placeholder = '留言内容不能为空..';
             oText.focus();
+        }else if (str == '' || typeof (str) == 'undefined') {
+            oName.placeholder = '昵称不能为空';
+            oName.focus();
         } else {
             oBtn.disabled = '';
         }
+    };
+    oBtn.onmouseover = function () {
+        var text = oText.value;
+        var str = oName.value;
+        if ((str == '' || typeof (str) == 'undefined') || (text == '' || typeof (text) == 'undefined')) {
+            oBtn.disabled = 'disabled';
+        } else {
+            oBtn.disabled = '';
+        }
+
     };
     $("#btnCreateMessage").click(function () {
         alert("提交成功，等待管理员审核通过后即可显示");
