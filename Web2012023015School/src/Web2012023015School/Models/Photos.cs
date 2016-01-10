@@ -10,7 +10,7 @@ namespace Web2012023015School.Models
         //校园风光
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Discription { get; set; }
+        public string Description { get; set; }
         public DateTime Datetime { get; set; }
         public string Path { get; set; } 
     }

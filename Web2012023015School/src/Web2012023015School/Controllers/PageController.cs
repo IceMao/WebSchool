@@ -18,31 +18,31 @@ namespace Web2012023015School.Controllers
         [HttpGet]
         public IActionResult News()
         {
-            return PagedView(DB.News, 7);
+            return PagedView(DB.News.ToList(), 7);
         }
         
         [HttpGet]
         public IActionResult Article()
         {
-            return PagedView(DB.Article, 7);
+            return PagedView(DB.Article.ToList(), 7);
         }
         
         [HttpGet]
         public IActionResult Inform()
         {
-            return PagedView(DB.Inform, 7);
+            return PagedView(DB.Inform.ToList(), 7);
         }
 
         [HttpGet]
         public IActionResult Photos()
         {
-            return PagedView(DB.Photos, 7);
+            return PagedView(DB.Photos.ToList(), 7);
         }
 
         [HttpGet]    
         public IActionResult RecruitStudents()
         {
-            return PagedView(DB.RecruitStudents, 7);
+            return PagedView(DB.RecruitStudents.ToList(), 7);
         }
         [HttpGet]
         public IActionResult Message()

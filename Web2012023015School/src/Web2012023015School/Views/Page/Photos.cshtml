@@ -4,6 +4,19 @@
 @model IEnumerable<Photos>
 <div style="margin-top:-20px;"></div>
 <div class="col-md-9">
+    @foreach (var x in Model)
+    {
+        <div class="col-sm-6 col-md-6" style="margin:0 auto;">
+            <div class="thumbnail" style=" background-color:aquamarine;">
+                <img src="/ViewPager/ShowPicture/@x.Path"
+                     alt="图片加载失败哟~">
+            </div>
+            <div class="caption" >
+                <p>@x.Description@x.Path</p>
+            </div>
+        </div>
+
+    }
     <div class="col-sm-6 col-md-6"  style="margin:0 auto;">
         <div class="thumbnail">
             <img src="~/images/department.jpg"

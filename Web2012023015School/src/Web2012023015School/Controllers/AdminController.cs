@@ -270,7 +270,7 @@ namespace Web2012023015School.Controllers
                 return Content("没有该记录！");
             n.Title = photos.Title;
             n.Path = photos.Path;
-            n.Discription = photos.Discription;
+            n.Description = photos.Description;
             n.Datetime = photos.Datetime;
             DB.SaveChanges();
             return RedirectToAction("DetailsPhotos", "Admin");
