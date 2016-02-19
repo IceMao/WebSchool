@@ -6,21 +6,21 @@
     <form asp-action="CreateCEmail" asp-controller="Home" method="post">
         <div class="container">
             <div class="col-md-9">
-                <div class="container-fluid">
+                <div class="container-fluid"> 
                     <div>
-                        <table>
+                        <table class="table">
                             <thead>
                                 <tr>
-                                    <th>标题：</th>
-                                    <td><input type="text" name="Title" placeholder="请输入标题" style="width:100%;" /></td>
+                                    <th>标题</th>
+                                    <td><input class="form-control" type="text" name="Title" placeholder="请输入标题" style="width:100%;" /></td>
                                 </tr>
                                 <tr>
-                                    <th>你的联系邮箱：</th>
-                                    <td><input type="email" name="Email" placeholder="请输入您的邮箱" style="width:100%;" /></td>
+                                    <th>你的联系邮箱</th>
+                                    <td><input class="form-control" type="email" name="Email" placeholder="请输入您的邮箱" style="width:100%;" /></td>
                                 </tr>
                                 <tr>
-                                    <th>内容：</th>
-                                    <td><textarea name="Content" placeholder="请输入内容" style="height:260px;width:100%;resize:none;"></textarea></td>
+                                    <th>内容</th>
+                                    <td><textarea class="form-control" name="Content" placeholder="请输入内容" cols="24" rows="10" style="resize:none;"></textarea></td>
                                 </tr>
                             </thead>
                         </table>

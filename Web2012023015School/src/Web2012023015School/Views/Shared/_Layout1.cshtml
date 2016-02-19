@@ -35,51 +35,52 @@
 <body>
     <div class="headbanner">
     </div>
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" asp-action="Index" asp-controller="Home"></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-action="Index" asp-controller="Home">学&nbsp;校&nbsp;首&nbsp;页</a></li>
-                    <li><a asp-action="Details" asp-controller="Home">学&nbsp;校&nbsp;概&nbsp;况</a></li>
-                    <li><a asp-action="Photos" asp-controller="Page">校&nbsp;园&nbsp;风&nbsp;光</a></li>
-                    <li><a asp-action="News" asp-controller="Page">校&nbsp;园&nbsp;新&nbsp;闻</a></li>
-                    <li><a asp-action="Article" asp-controller="Page">师&nbsp;生&nbsp;文&nbsp;章</a></li>
-                    <li><a asp-action="RecruitStudents" asp-controller="Page">招&nbsp;生&nbsp;信&nbsp;息</a></li>
-                    <li><a asp-action="Inform" asp-controller="Page">通&nbsp;知&nbsp;公&nbsp;告</a></li>
-                    <li><a asp-action="CEmail" asp-controller="Page">校&nbsp;长&nbsp;信&nbsp;箱</a></li>
-                    <li><a asp-action="Activities" asp-controller="Page">课&nbsp;余&nbsp;活&nbsp;动</a></li>
-                    <li><a asp-action="Message" asp-controller="Page">留&nbsp;&nbsp;言&nbsp;&nbsp;版</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">友&nbsp;情&nbsp;链&nbsp;接 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="http://ggdksy.ggedu.gov.cn" target="_blank">达开初中</a></li>
-                            <li><a href="http://ggdkgz.ggedu.gov.cn" target="_blank">达开高中</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">著名高校</li>
-                            <li><a href="http://www.tsinghua.edu.cn" target="_blank">清华大学</a></li>
-                            <li><a href="http://www.pku.edu.cn" target="_blank">北京大学</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" asp-action="Index" asp-controller="Home"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-action="Index" asp-controller="Home">学&nbsp;校&nbsp;首&nbsp;页</a></li>
+                        <li><a asp-action="Details" asp-controller="Home">学&nbsp;校&nbsp;概&nbsp;况</a></li>
+                        <li><a asp-action="Photos" asp-controller="Page">校&nbsp;园&nbsp;风&nbsp;光</a></li>
+                        <li><a asp-action="News" asp-controller="Page">校&nbsp;园&nbsp;新&nbsp;闻</a></li>
+                        <li><a asp-action="Article" asp-controller="Page">师&nbsp;生&nbsp;文&nbsp;章</a></li>
+                        <li><a asp-action="RecruitStudents" asp-controller="Page">招&nbsp;生&nbsp;信&nbsp;息</a></li>
+                        <li><a asp-action="Inform" asp-controller="Page">通&nbsp;知&nbsp;公&nbsp;告</a></li>
+                        <li><a asp-action="CEmail" asp-controller="Page">校&nbsp;长&nbsp;信&nbsp;箱</a></li>
+                        <li><a asp-action="Activities" asp-controller="Page">课&nbsp;余&nbsp;活&nbsp;动</a></li>
+                        <li><a asp-action="Message" asp-controller="Page">留&nbsp;&nbsp;言&nbsp;&nbsp;版</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">友&nbsp;情&nbsp;链&nbsp;接 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://ggdksy.ggedu.gov.cn" target="_blank">达开初中</a></li>
+                                <li><a href="http://ggdkgz.ggedu.gov.cn" target="_blank">达开高中</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">著名高校</li>
+                                <li><a href="http://www.tsinghua.edu.cn" target="_blank">清华大学</a></li>
+                                <li><a href="http://www.pku.edu.cn" target="_blank">北京大学</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+          
+        </nav>
         <div>
             @RenderBody()
-        </div>     
+        </div>
+    </div>  
     <!-- FOOTER -->
     <div class="footer">
         <footer class="text-center" style="background-color:rgb(128,217,97);height:50px;">
-            <div style="line-height:50px;">&copy;CopyRight By 2012023015.&middot;<a asp-action="Login" asp-controller="Account">后台登陆管理</a></div>
+            <div style="line-height:50px;">&copy; 2016 IceMao.&middot;<a asp-action="Login" asp-controller="Account">后台登陆管理</a></div>
         </footer>
     </div>
 </body>
