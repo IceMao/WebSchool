@@ -18,39 +18,56 @@ namespace Web2012023015School.Controllers
         [HttpGet]
         public IActionResult News()
         {
-            return PagedView(DB.News.ToList(), 7);
+            var latestnews = DB.News.OrderByDescending(x => x.Datatime).ToList();
+            var recommendednews = DB.News.OrderBy(x => x.Priority).ThenByDescending(x => x.Datatime).Take(6).ToList();
+            ViewBag.recommendednews = recommendednews;
+            return PagedView(latestnews, 7);
         }
-        
+     
         [HttpGet]
         public IActionResult Article()
         {
-            return PagedView(DB.Article.ToList(), 7);
+            var article = DB.Article.OrderByDescending(x => x.Datatime).ToList();
+            var recommendedarticle = DB.Article.OrderBy(x => x.Priority).ThenByDescending(x => x.Datatime).Take(6).ToList();
+            ViewBag.recommendedarticle = recommendedarticle;
+            return PagedView(article, 7);
         }
         
         [HttpGet]
         public IActionResult Inform()
         {
-            return PagedView(DB.Inform.ToList(), 7);
+            return PagedView(DB.Inform, 7);
         }
 
         [HttpGet]
         public IActionResult Photos()
         {
-            return PagedView(DB.Photos.ToList(), 7);
+            return PagedView(DB.Photos, 7);
         }
 
         [HttpGet]    
         public IActionResult RecruitStudents()
         {
-            return PagedView(DB.RecruitStudents.ToList(), 7);
+            var recruit = DB.RecruitStudents.OrderByDescending(x=>x.Datatime).ToList();
+            return PagedView(recruit, 10);
         }
         [HttpGet]
         public IActionResult Message()
         {
             var message = DB.Message.OrderByDescending(x => x.Datatime)
                 .ToList();
-            return PagedView(message,10);
+            return PagedView(message,5);
         }
-       
+
+        [HttpGet]
+        public IActionResult CEmail()
+        {
+            return View();
+        }
+       public IActionResult Activities()
+        {
+            var activiteis = DB.Activities.OrderByDescending(x => x.Datatime).ToList();
+            return PagedView(activiteis, 10);
+        }
     }
 }
