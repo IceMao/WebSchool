@@ -4,122 +4,73 @@
 @model IEnumerable<Message>
 <head>
     <script type="text/javascript" src="~/scripts/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/styles/new.css" />
 </head>
-<div style="margin-top:-20px;"></div>
-<div class="col-md-9">
-    <div class="container-fluid" id="accordion">
-        <div class="panel-group" id="accordion">
-            <h4>
-                <span class="label label-info">留言板</span>
-            </h4>
-            @foreach (var x in Model)
-            {
-                @if (x.State == State.通过)
-                {
-                    <ul class="well list-unstyled">
-                        <li>
-                        <div class="text-success lead">昵称：@x.NickName</div>
-                            <p class="text-justify">@x.Content</p>
-                            <p class="text-right text-muted">发布时间：@x.Datatime</p>
-                        </li>
-                    </ul>
-                }
-            }
-            @Html.MakePager("pager-item", "active", "pager")
-            <div style="height:40px;"></div>
-            <div>
-                <form asp-action="CreateMessage" asp-controller="Home" method="post">
-                    <table class="table">
-                        <tr>
-                            <th>昵称</th>
-                            <td>
-                                <input type="text" name="NickName" id="NickName" />
-                            </td>
-                        </tr>
-                        <tr style="width:100%;height:80px;">
-                            <th>留言</th>
-                            <td>
-                                <textarea id="TextMsg" name="Content" style="width:100%;height:80px; resize:none;" ></textarea>
-                            </td>
-                        </tr>
-                    </table>
-                    <p>
-                        <input type="submit" disabled="disabled" class="btn" id="btnCreateMessage" value="留言" />
-                    </p>
-                </form>
-            </div>
-        </div>
+<div class="messagebanner" style="margin-top:-20px;">
+    <div class="container" style="height:200px;">
+        <hgroup>
+            <h1>留言板块页面</h1>
+            <h4>欢迎大家留言</h4>
+        </hgroup>
     </div>
 </div>
-<style>
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: #f00;
-    }
+<div style="height:10px;background-color:#eee;"></div>
+<div class="message">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" style="background-color:rgb(101,172,76);border-radius:8px;">
+                <div class="container-fluid">
+                    <div class="row message-content" style="margin-top:10px;">
+                        @foreach (var x in Model)
+                        {
+                            @if (x.State == State.通过)
+                            {
+                                <div class="col-md-3 col-sm-5 col-xs-5">
+                                    <img src="~/images/person.png" class="img-responsive" alt="加载失败"/>
+                                    <p>访客昵称：@x.NickName</p>
+                                </div>
+                                <div class="col-md-9 col-sm-7 col-xs-7" style="height:180px;">
+                                    <pre style="margin:5px;width:auto;height:140px;background-color:#eee;" disabled="disabled">@x.Content</pre>
+                                    <hr style="color:#eee;"/>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        @Html.MakePager("pager-item", "active", "pager")
+    </div>
 
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: #f00;
-    }
-
-    input:-ms-input-placeholder,textarea:-ms-input-placeholder { /* IE 10+ */
-        color: #f00;
-    }
-
-    input::-webkit-input-placeholder,textarea::-webkit-input-placeholder { /* WebKit browsers */
-        color: #f00;
-    }
-</style>
+    <div class="container-fluid">
+        <form asp-action="CreateMessage" asp-controller="Home" method="post" id="frmcreatemessage">
+            <table class="table" style="background-color:rgb(101,172,76);border-radius:8px;">
+                <tr>
+                    <th style="color:#333;">昵称：</th>
+                    <td><input type="text" name="NickName" id="NickNameId" placeholder="昵称不能为空" style="border-radius:6px;" /></td>
+                </tr>
+                <tr>
+                    <th style="color:#333;">留言：</th>
+                    <td><textarea id="ContentId" placeholder="请输入内容,提交后待管理员审核后即可在页面中显示" name="Content" style="width:100%;height:80px;resize:none;border-radius:6px;"></textarea></td>
+                </tr>
+            </table>
+            <p><a href="javascript:addition()" class="btn btn-primary btn-success">留言</a></p>
+        </form>
+    </div>
+</div>
 <script type="text/javascript">
-    var oName = document.getElementById('NickName');
-    var oText = document.getElementById('TextMsg');
-    var oBtn = document.getElementById('btnCreateMessage');
-
-    oName.focus();
-    document.onkeydown = function (event) {
-        if (event.keyCode == 13) {
-            return false;
-
+    
+    function addition() {
+        var NickName = eval(document.getElementById('NickNameId')).value;
+        var Content = eval(document.getElementById('ContentId')).value;
+        if (NickName == '' || Content == ''){
+            alert("请检查昵称或者留言内容是否为空");
         }
-        //var target, code, tag;
-        //if (!event) {
-        //    event = window.event; //针对ie浏览器
-        //    target = event.srcElement;
-        //    code = event.keyCode;
-        //    if (code == 13) {
-        //        tag = target.tagName;
-        //        if (tag == "TEXTAREA") { return true; }
-        //        else { return false; }
-        //    }
-        //}
-        //else {
-        //    target = event.target; //针对遵循w3c标准的浏览器，如Firefox
-        //    code = event.keyCode;
-        //    if (code == 13) {
-        //        tag = target.tagName;
-        //        if (tag == "INPUT") { return false; }
-        //        else { return true; }
-        //    }
-        //}
-    };
-
-    oName.onblur = function () {
-        var str = oName.value;
-        if (str == '' || typeof (str) == 'undefined') {
-            oName.placeholder = '昵称不能为空';
-            oName.focus();
-        } 
-    };
-    oText.onblur = function () {
-        var text = oText.value;
-        if (text == '' || typeof (text) == 'undefined') {
-            oText.placeholder = '留言内容不能为空..';
-            oText.focus();
-        } else {
-            oBtn.disabled = '';
+        else {
+            alert("提交成功，请等待管理员审核通过后即可显示");
+            frmcreatemessage.submit();
         }
-    };
-    $("#btnCreateMessage").click(function () {
-        alert("提交成功，等待管理员审核通过后即可显示");
-    });
+    }
 </script>
 
 
